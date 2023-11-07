@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12user_service.proto\x12\x0cuser_service\"!\n\x0cGetRpRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\"}\n\rGetRpResponse\x12\x0b\n\x03\x63rp\x18\x01 \x01(\x05\x12\r\n\x05\x63oins\x18\x02 \x01(\x05\x12\x0b\n\x03prp\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\x05\x12\x12\n\nfirst_name\x18\x05 \x01(\t\x12\x11\n\tlast_name\x18\x06 \x01(\t\x12\r\n\x05login\x18\x07 \x01(\t2R\n\x0bUserService\x12\x43\n\x06get_rp\x12\x1a.user_service.GetRpRequest\x1a\x1b.user_service.GetRpResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12user_service.proto\x12\x0cuser_service\"!\n\x0cGetRpRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\"\xa2\x01\n\rGetRpResponse\x12\x0b\n\x03\x63rp\x18\x01 \x01(\x05\x12\r\n\x05\x63oins\x18\x02 \x01(\x05\x12\x0b\n\x03prp\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\x05\x12\x12\n\nfirst_name\x18\x05 \x01(\t\x12\x11\n\tlast_name\x18\x06 \x01(\t\x12\r\n\x05login\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\t \x01(\t2R\n\x0bUserService\x12\x43\n\x06get_rp\x12\x1a.user_service.GetRpRequest\x1a\x1b.user_service.GetRpResponse\"\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -22,8 +22,8 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   _globals['_GETRPREQUEST']._serialized_start=36
   _globals['_GETRPREQUEST']._serialized_end=69
-  _globals['_GETRPRESPONSE']._serialized_start=71
-  _globals['_GETRPRESPONSE']._serialized_end=196
-  _globals['_USERSERVICE']._serialized_start=198
-  _globals['_USERSERVICE']._serialized_end=280
+  _globals['_GETRPRESPONSE']._serialized_start=72
+  _globals['_GETRPRESPONSE']._serialized_end=234
+  _globals['_USERSERVICE']._serialized_start=236
+  _globals['_USERSERVICE']._serialized_end=318
 # @@protoc_insertion_point(module_scope)
