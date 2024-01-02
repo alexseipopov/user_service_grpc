@@ -5,6 +5,7 @@ package user_service;
 service UserService {
   rpc get_rp (GetRpRequest) returns (GetRpResponse) {}
   rpc set_avatar (SetAvatarRequest) returns (SetAvatarResponse) {}
+  rpc get_avatar (GetAvatarRequest) returns (GetAvatarResponse) {}
 }
 
 message GetRpRequest {
@@ -31,4 +32,14 @@ message SetAvatarRequest {
 message SetAvatarResponse {
   int32 status = 1;
   string description = 2;
+}
+
+message GetAvatarRequest {
+  string capy_uuid = 1;
+}
+
+message GetAvatarResponse {
+  string avatar = 1;
+  int32 status = 2;
+  string description = 3;
 }
