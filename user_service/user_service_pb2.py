@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12user_service.proto\x12\x0cuser_service\"!\n\x0cGetRpRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\"\xa2\x01\n\rGetRpResponse\x12\x0b\n\x03\x63rp\x18\x01 \x01(\x05\x12\r\n\x05\x63oins\x18\x02 \x01(\x05\x12\x0b\n\x03prp\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\x05\x12\x12\n\nfirst_name\x18\x05 \x01(\t\x12\x11\n\tlast_name\x18\x06 \x01(\t\x12\r\n\x05login\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\t \x01(\t\"5\n\x10SetAvatarRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x02 \x01(\t\"8\n\x11SetAvatarResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"%\n\x10GetAvatarRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\"H\n\x11GetAvatarResponse\x12\x0e\n\x06\x61vatar\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t2\xf4\x01\n\x0bUserService\x12\x43\n\x06get_rp\x12\x1a.user_service.GetRpRequest\x1a\x1b.user_service.GetRpResponse\"\x00\x12O\n\nset_avatar\x12\x1e.user_service.SetAvatarRequest\x1a\x1f.user_service.SetAvatarResponse\"\x00\x12O\n\nget_avatar\x12\x1e.user_service.GetAvatarRequest\x1a\x1f.user_service.GetAvatarResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12user_service.proto\x12\x0cuser_service\"!\n\x0cGetRpRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\"\xa2\x01\n\rGetRpResponse\x12\x0b\n\x03\x63rp\x18\x01 \x01(\x05\x12\r\n\x05\x63oins\x18\x02 \x01(\x05\x12\x0b\n\x03prp\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\x05\x12\x12\n\nfirst_name\x18\x05 \x01(\t\x12\x11\n\tlast_name\x18\x06 \x01(\t\x12\r\n\x05login\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\t \x01(\t\"5\n\x10SetAvatarRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x02 \x01(\t\"8\n\x11SetAvatarResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"%\n\x10GetAvatarRequest\x12\x11\n\tcapy_uuid\x18\x01 \x01(\t\"H\n\x11GetAvatarResponse\x12\x0e\n\x06\x61vatar\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"<\n\x12GetPeerInfoRequest\x12\x10\n\x08nickname\x18\x01 \x01(\t\x12\x14\n\x0crequest_uuid\x18\x02 \x01(\t\"\x80\x01\n\x13GetPeerInfoResponse\x12\x0e\n\x06\x61vatar\x18\x01 \x01(\t\x12\x12\n\nfirst_name\x18\x02 \x01(\t\x12\x11\n\tlast_name\x18\x03 \x01(\t\x12\r\n\x05login\x18\x04 \x01(\t\x12\x0e\n\x06status\x18\x05 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t2\xcc\x02\n\x0bUserService\x12\x43\n\x06get_rp\x12\x1a.user_service.GetRpRequest\x1a\x1b.user_service.GetRpResponse\"\x00\x12O\n\nset_avatar\x12\x1e.user_service.SetAvatarRequest\x1a\x1f.user_service.SetAvatarResponse\"\x00\x12O\n\nget_avatar\x12\x1e.user_service.GetAvatarRequest\x1a\x1f.user_service.GetAvatarResponse\"\x00\x12V\n\rget_peer_info\x12 .user_service.GetPeerInfoRequest\x1a!.user_service.GetPeerInfoResponse\"\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -32,6 +32,10 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_GETAVATARREQUEST']._serialized_end=386
   _globals['_GETAVATARRESPONSE']._serialized_start=388
   _globals['_GETAVATARRESPONSE']._serialized_end=460
-  _globals['_USERSERVICE']._serialized_start=463
-  _globals['_USERSERVICE']._serialized_end=707
+  _globals['_GETPEERINFOREQUEST']._serialized_start=462
+  _globals['_GETPEERINFOREQUEST']._serialized_end=522
+  _globals['_GETPEERINFORESPONSE']._serialized_start=525
+  _globals['_GETPEERINFORESPONSE']._serialized_end=653
+  _globals['_USERSERVICE']._serialized_start=656
+  _globals['_USERSERVICE']._serialized_end=988
 # @@protoc_insertion_point(module_scope)
