@@ -7,6 +7,7 @@ service UserService {
   rpc set_avatar (SetAvatarRequest) returns (SetAvatarResponse) {}
   rpc get_avatar (GetAvatarRequest) returns (GetAvatarResponse) {}
   rpc get_peer_info (GetPeerInfoRequest) returns (GetPeerInfoResponse) {}
+  rpc get_friend_stats (GetFriendStatsRequest) returns (GetFriendStatsResponse) {}
 }
 
 message GetRpRequest {
@@ -57,4 +58,15 @@ message GetPeerInfoResponse {
   string login = 4;
   int32 status = 5;
   string description = 6;
+}
+
+message GetFriendStatsRequest {
+  string capy_uuid = 1;
+}
+
+message GetFriendStatsResponse {
+  int32 friends = 1;
+  int32 subscribers = 2;
+  int32 status = 3;
+  string description = 4;
 }
