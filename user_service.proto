@@ -8,6 +8,7 @@ service UserService {
   rpc get_avatar (GetAvatarRequest) returns (GetAvatarResponse) {}
   rpc get_peer_info (GetPeerInfoRequest) returns (GetPeerInfoResponse) {}
   rpc get_friend_stats (GetFriendStatsRequest) returns (GetFriendStatsResponse) {}
+  rpc search_user (SearchUserRequest) returns (SearchUserResponse) {}
 }
 
 message GetRpRequest {
@@ -69,4 +70,22 @@ message GetFriendStatsResponse {
   int32 subscribers = 2;
   int32 status = 3;
   string description = 4;
+}
+
+message SearchUserRequest {
+  string nickname = 1;
+  string capy_uuid = 2;
+}
+
+message SearchedUser {
+  string avatar = 1;
+  string login = 2;
+}
+
+message SearchUserResponse {
+  repeated SearchedUser friends = 1;
+  repeated SearchedUser on_platform = 2;
+  repeated SearchedUser out_platform = 3;
+  int32 status = 4;
+  string description = 5;
 }
