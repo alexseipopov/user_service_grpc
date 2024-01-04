@@ -9,6 +9,7 @@ service UserService {
   rpc get_peer_info (GetPeerInfoRequest) returns (GetPeerInfoResponse) {}
   rpc get_friend_stats (GetFriendStatsRequest) returns (GetFriendStatsResponse) {}
   rpc search_user (SearchUserRequest) returns (SearchUserResponse) {}
+  rpc add_friend (AddFriendRequest) returns (AddFriendResponse) {}
 }
 
 message GetRpRequest {
@@ -88,4 +89,14 @@ message SearchUserResponse {
   repeated SearchedUser out_platform = 3;
   int32 status = 4;
   string description = 5;
+}
+
+message AddFriendRequest {
+  string capy_uuid = 1;
+  string nickname = 2;
+}
+
+message AddFriendResponse {
+  int32 status = 1;
+  string description = 2;
 }

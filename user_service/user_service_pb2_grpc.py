@@ -44,6 +44,11 @@ class UserServiceStub(object):
                 request_serializer=user__service__pb2.SearchUserRequest.SerializeToString,
                 response_deserializer=user__service__pb2.SearchUserResponse.FromString,
                 )
+        self.add_friend = channel.unary_unary(
+                '/user_service.UserService/add_friend',
+                request_serializer=user__service__pb2.AddFriendRequest.SerializeToString,
+                response_deserializer=user__service__pb2.AddFriendResponse.FromString,
+                )
 
 
 class UserServiceServicer(object):
@@ -85,6 +90,12 @@ class UserServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def add_friend(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_UserServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -117,6 +128,11 @@ def add_UserServiceServicer_to_server(servicer, server):
                     servicer.search_user,
                     request_deserializer=user__service__pb2.SearchUserRequest.FromString,
                     response_serializer=user__service__pb2.SearchUserResponse.SerializeToString,
+            ),
+            'add_friend': grpc.unary_unary_rpc_method_handler(
+                    servicer.add_friend,
+                    request_deserializer=user__service__pb2.AddFriendRequest.FromString,
+                    response_serializer=user__service__pb2.AddFriendResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -227,5 +243,22 @@ class UserService(object):
         return grpc.experimental.unary_unary(request, target, '/user_service.UserService/search_user',
             user__service__pb2.SearchUserRequest.SerializeToString,
             user__service__pb2.SearchUserResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def add_friend(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/user_service.UserService/add_friend',
+            user__service__pb2.AddFriendRequest.SerializeToString,
+            user__service__pb2.AddFriendResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
